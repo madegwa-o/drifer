@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Suspense } from "react";
 import { AuthProvider } from "@/hooks/auth-provider";
@@ -39,7 +38,6 @@ export default function RootLayout({
                 <Suspense fallback={null}>
                     <Header />
                     {children}
-                    <Analytics />
                 </Suspense>
             </ThemeProvider>
         </AuthProvider>
