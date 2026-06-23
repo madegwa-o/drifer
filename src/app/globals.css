@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* AntiDeath — clean white, editorial */           /* pure white */        /* near-black */
+  /* Drifer — clean white, editorial */           /* pure white */        /* near-black */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -43,7 +43,7 @@
   --chart-5: oklch(0.269 0 0);
 }
 
-/* AntiDeath is a white/light brand — dark mode kept minimal */
+/* Drifer is a white/light brand — dark mode kept minimal */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

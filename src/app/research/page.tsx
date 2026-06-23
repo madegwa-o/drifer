@@ -224,7 +224,7 @@ export default function ResearchPage() {
                         <p className="text-neutral-400 max-w-xs md:text-right">
                             We welcome partnerships, data sharing agreements, and field study proposals.
                         </p>
-                        <a href="mailto:research@antideath.io?subject=Research%20Partnership">
+                        <a href="mailto:research@drifer.io?subject=Research%20Partnership">
                             <button className="h-14 px-10 bg-[#0a0a0a] text-white text-sm font-semibold rounded-full hover:bg-neutral-800 transition-colors flex items-center gap-2">
                                 Contact Research Team
                                 <ArrowRight className="h-4 w-4" />

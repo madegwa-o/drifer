@@ -15,11 +15,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "AntiDeath — Road Safety Technology",
+    title: "Drifer — Road Safety Technology",
     description:
-        "AntiDeath deploys affordable emergency detection, AI vision, and LiDAR into everyday vehicles to reduce road fatalities to zero.",
+        "Drifer deploys affordable emergency detection, AI vision, and LiDAR into everyday vehicles to reduce road fatalities to zero.",
     openGraph: {
-        title: "AntiDeath — Road Safety Technology",
+        title: "Drifer — Road Safety Technology",
         description: "Real-time accident detection. When every second counts.",
         type: "website",
     },

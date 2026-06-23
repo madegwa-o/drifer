@@ -130,7 +130,7 @@ export default function OurMarketPage() {
             <section className="px-8 md:px-16 lg:px-24 py-28 md:py-40 bg-[#f7f7f5] border-b border-neutral-100">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-5 font-medium">
-                        Why AntiDeath
+                        Why Drifer
                     </p>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#0a0a0a] mb-16 max-w-lg">
                         Built for emerging markets.
