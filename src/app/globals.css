@@ -41,6 +41,14 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
+
+  /* Notifications */
+  --success: oklch(0.683 0.182 142.495);
+  --warning: oklch(0.721 0.219 67.59);
+  --surface: oklch(0.98 0 0);
+  --text-primary: oklch(0.205 0 0);
+  --text-secondary: oklch(0.556 0 0);
+  --text-tertiary: oklch(0.708 0 0);
 }
 
 /* Drifer is a white/light brand — dark mode kept minimal */
@@ -77,6 +85,14 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
+
+  /* Notifications */
+  --success: oklch(0.683 0.182 142.495);
+  --warning: oklch(0.721 0.219 67.59);
+  --surface: oklch(0.205 0 0);
+  --text-primary: oklch(0.985 0 0);
+  --text-secondary: oklch(0.708 0 0);
+  --text-tertiary: oklch(0.556 0 0);
 }
 
 @theme inline {
