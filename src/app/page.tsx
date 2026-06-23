@@ -80,7 +80,7 @@ export default function Home() {
                             Make road deaths<br />a thing of the past.
                         </h2>
                         <p className="text-lg text-neutral-500 leading-relaxed">
-                            1.2 million people die on roads every year. We believe that number can reach zero. AntiDeath deploys affordable, open hardware into everyday vehicles so help arrives before it&#39;s too late.
+                            1.2 million people die on roads every year. We believe that number can reach zero. Drifer deploys affordable, open hardware into everyday vehicles so help arrives before it&#39;s too late.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
