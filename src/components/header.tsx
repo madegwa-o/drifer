@@ -6,15 +6,15 @@ import { Menu, X, Moon, Sun, User, LogIn, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/hooks/theme-provider"
 import { useSession, signOut } from "next-auth/react"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+// import {
+//     DropdownMenu,
+//     DropdownMenuContent,
+//     DropdownMenuItem,
+//     DropdownMenuLabel,
+//     DropdownMenuSeparator,
+//     DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu"
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export function Header() {
     const { data: session, status } = useSession()
@@ -41,11 +41,8 @@ export function Header() {
 
     const navLinks = [
         { label: "Home", href: "/" },
-        { label: "Map", href: "/map" },
-        { label: "Journeys", href: "/journeys" },
         { label: "Research", href: "/research" },
         { label: "Our Market", href: "/our-market" },
-        { label: "My Account", href: "/account" },
     ]
 
     const handleSignOut = async () => {
@@ -98,61 +95,61 @@ export function Header() {
                     </Button>
 
                     {/* User Avatar & Auth (Desktop) */}
-                    <div className="hidden md:flex items-center gap-2">
-                        {status === "loading" ? (
-                            <div className="h-9 w-9 rounded-full bg-muted animate-pulse" />
-                        ) : session?.user ? (
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <Button variant="ghost" className="relative h-9 w-9 rounded-full">
-                                        <Avatar className="h-9 w-9">
-                                            <AvatarImage
-                                                src={session.user.image || undefined}
-                                                alt={session.user.name || "User"}
-                                            />
-                                            <AvatarFallback className="bg-primary text-primary-foreground">
-                                                {getUserInitials(session.user.name)}
-                                            </AvatarFallback>
-                                        </Avatar>
-                                    </Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end" className="w-56">
-                                    <DropdownMenuLabel>
-                                        <div className="flex flex-col space-y-1">
-                                            <p className="text-sm font-medium leading-none">
-                                                {session.user.name}
-                                            </p>
-                                            <p className="text-xs leading-none text-muted-foreground">
-                                                {session.user.email}
-                                            </p>
-                                        </div>
-                                    </DropdownMenuLabel>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem asChild>
-                                        <Link href="/account" className="cursor-pointer">
-                                            <User className="mr-2 h-4 w-4" />
-                                            My Account
-                                        </Link>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem
-                                        onClick={handleSignOut}
-                                        className="cursor-pointer text-destructive focus:text-destructive"
-                                    >
-                                        <LogOut className="mr-2 h-4 w-4" />
-                                        Sign Out
-                                    </DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        ) : (
-                            <Button variant="ghost" size="sm" asChild>
-                                <Link href="/signin">
-                                    <LogIn className="mr-2 h-4 w-4" />
-                                    Sign In
-                                </Link>
-                            </Button>
-                        )}
-                    </div>
+                    {/*<div className="hidden md:flex items-center gap-2">*/}
+                    {/*    {status === "loading" ? (*/}
+                    {/*        <div className="h-9 w-9 rounded-full bg-muted animate-pulse" />*/}
+                    {/*    ) : session?.user ? (*/}
+                    {/*        <DropdownMenu>*/}
+                    {/*            <DropdownMenuTrigger asChild>*/}
+                    {/*                <Button variant="ghost" className="relative h-9 w-9 rounded-full">*/}
+                    {/*                    <Avatar className="h-9 w-9">*/}
+                    {/*                        <AvatarImage*/}
+                    {/*                            src={session.user.image || undefined}*/}
+                    {/*                            alt={session.user.name || "User"}*/}
+                    {/*                        />*/}
+                    {/*                        <AvatarFallback className="bg-primary text-primary-foreground">*/}
+                    {/*                            {getUserInitials(session.user.name)}*/}
+                    {/*                        </AvatarFallback>*/}
+                    {/*                    </Avatar>*/}
+                    {/*                </Button>*/}
+                    {/*            </DropdownMenuTrigger>*/}
+                    {/*            <DropdownMenuContent align="end" className="w-56">*/}
+                    {/*                <DropdownMenuLabel>*/}
+                    {/*                    <div className="flex flex-col space-y-1">*/}
+                    {/*                        <p className="text-sm font-medium leading-none">*/}
+                    {/*                            {session.user.name}*/}
+                    {/*                        </p>*/}
+                    {/*                        <p className="text-xs leading-none text-muted-foreground">*/}
+                    {/*                            {session.user.email}*/}
+                    {/*                        </p>*/}
+                    {/*                    </div>*/}
+                    {/*                </DropdownMenuLabel>*/}
+                    {/*                <DropdownMenuSeparator />*/}
+                    {/*                <DropdownMenuItem asChild>*/}
+                    {/*                    <Link href="/account" className="cursor-pointer">*/}
+                    {/*                        <User className="mr-2 h-4 w-4" />*/}
+                    {/*                        My Account*/}
+                    {/*                    </Link>*/}
+                    {/*                </DropdownMenuItem>*/}
+                    {/*                <DropdownMenuSeparator />*/}
+                    {/*                <DropdownMenuItem*/}
+                    {/*                    onClick={handleSignOut}*/}
+                    {/*                    className="cursor-pointer text-destructive focus:text-destructive"*/}
+                    {/*                >*/}
+                    {/*                    <LogOut className="mr-2 h-4 w-4" />*/}
+                    {/*                    Sign Out*/}
+                    {/*                </DropdownMenuItem>*/}
+                    {/*            </DropdownMenuContent>*/}
+                    {/*        </DropdownMenu>*/}
+                    {/*    ) : (*/}
+                    {/*        <Button variant="ghost" size="sm" asChild>*/}
+                    {/*            <Link href="/signin">*/}
+                    {/*                <LogIn className="mr-2 h-4 w-4" />*/}
+                    {/*                Sign In*/}
+                    {/*            </Link>*/}
+                    {/*        </Button>*/}
+                    {/*    )}*/}
+                    {/*</div>*/}
 
                     {/* Mobile Menu Button */}
                     <Button
@@ -182,62 +179,62 @@ export function Header() {
                             </Link>
                         ))}
 
-                        <div className="border-t border-border/40 pt-4 mt-2">
-                            {status === "loading" ? (
-                                <div className="flex items-center gap-3">
-                                    <div className="h-10 w-10 rounded-full bg-muted animate-pulse" />
-                                    <div className="flex-1 space-y-2">
-                                        <div className="h-4 bg-muted rounded animate-pulse" />
-                                        <div className="h-3 bg-muted rounded w-2/3 animate-pulse" />
-                                    </div>
-                                </div>
-                            ) : session?.user ? (
-                                <div className="space-y-3">
-                                    <div className="flex items-center gap-3">
-                                        <Avatar className="h-10 w-10">
-                                            <AvatarImage
-                                                src={session.user.image || undefined}
-                                                alt={session.user.name || "User"}
-                                            />
-                                            <AvatarFallback className="bg-primary text-primary-foreground">
-                                                {getUserInitials(session.user.name)}
-                                            </AvatarFallback>
-                                        </Avatar>
-                                        <div className="flex-1 min-w-0">
-                                            <p className="text-sm font-medium truncate">
-                                                {session.user.name}
-                                            </p>
-                                            <p className="text-xs text-muted-foreground truncate">
-                                                {session.user.email}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <Button
-                                        variant="outline"
-                                        className="w-full justify-start text-destructive hover:text-destructive"
-                                        onClick={() => {
-                                            setIsMenuOpen(false)
-                                            handleSignOut()
-                                        }}
-                                    >
-                                        <LogOut className="mr-2 h-4 w-4" />
-                                        Sign Out
-                                    </Button>
-                                </div>
-                            ) : (
-                                <Button
-                                    variant="default"
-                                    className="w-full justify-start"
-                                    asChild
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <Link href="/signin">
-                                        <LogIn className="mr-2 h-4 w-4" />
-                                        Sign In
-                                    </Link>
-                                </Button>
-                            )}
-                        </div>
+                        {/*<div className="border-t border-border/40 pt-4 mt-2">*/}
+                        {/*    {status === "loading" ? (*/}
+                        {/*        <div className="flex items-center gap-3">*/}
+                        {/*            <div className="h-10 w-10 rounded-full bg-muted animate-pulse" />*/}
+                        {/*            <div className="flex-1 space-y-2">*/}
+                        {/*                <div className="h-4 bg-muted rounded animate-pulse" />*/}
+                        {/*                <div className="h-3 bg-muted rounded w-2/3 animate-pulse" />*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    ) : session?.user ? (*/}
+                        {/*        <div className="space-y-3">*/}
+                        {/*            <div className="flex items-center gap-3">*/}
+                        {/*                <Avatar className="h-10 w-10">*/}
+                        {/*                    <AvatarImage*/}
+                        {/*                        src={session.user.image || undefined}*/}
+                        {/*                        alt={session.user.name || "User"}*/}
+                        {/*                    />*/}
+                        {/*                    <AvatarFallback className="bg-primary text-primary-foreground">*/}
+                        {/*                        {getUserInitials(session.user.name)}*/}
+                        {/*                    </AvatarFallback>*/}
+                        {/*                </Avatar>*/}
+                        {/*                <div className="flex-1 min-w-0">*/}
+                        {/*                    <p className="text-sm font-medium truncate">*/}
+                        {/*                        {session.user.name}*/}
+                        {/*                    </p>*/}
+                        {/*                    <p className="text-xs text-muted-foreground truncate">*/}
+                        {/*                        {session.user.email}*/}
+                        {/*                    </p>*/}
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*            <Button*/}
+                        {/*                variant="outline"*/}
+                        {/*                className="w-full justify-start text-destructive hover:text-destructive"*/}
+                        {/*                onClick={() => {*/}
+                        {/*                    setIsMenuOpen(false)*/}
+                        {/*                    handleSignOut()*/}
+                        {/*                }}*/}
+                        {/*            >*/}
+                        {/*                <LogOut className="mr-2 h-4 w-4" />*/}
+                        {/*                Sign Out*/}
+                        {/*            </Button>*/}
+                        {/*        </div>*/}
+                        {/*    ) : (*/}
+                        {/*        <Button*/}
+                        {/*            variant="default"*/}
+                        {/*            className="w-full justify-start"*/}
+                        {/*            asChild*/}
+                        {/*            onClick={() => setIsMenuOpen(false)}*/}
+                        {/*        >*/}
+                        {/*            <Link href="/signin">*/}
+                        {/*                <LogIn className="mr-2 h-4 w-4" />*/}
+                        {/*                Sign In*/}
+                        {/*            </Link>*/}
+                        {/*        </Button>*/}
+                        {/*    )}*/}
+                        {/*</div>*/}
                     </nav>
                 </div>
             )}
