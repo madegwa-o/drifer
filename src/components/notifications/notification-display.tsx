@@ -19,14 +19,14 @@ const colorMap = {
         border: 'var(--success)',
     },
     error: {
-        bg: '#ef4444',
+        bg: 'var(--destructive)',
         text: 'white',
-        border: '#ef4444',
+        border: 'var(--destructive)',
     },
     warning: {
-        bg: '#f59e0b',
+        bg: 'var(--warning)',
         text: 'white',
-        border: '#f59e0b',
+        border: 'var(--warning)',
     },
     info: {
         bg: 'var(--text-primary)',
